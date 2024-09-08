@@ -45,7 +45,7 @@ type KeysOfType<Object, Type> = {
 
 function VencordSettings() {
     const [settingsDir, , settingsDirPending] = useAwaiter(VencordNative.settings.getSettingsDir, {
-        fallbackValue: "Loading..."
+        fallbackValue: "Pissing..."
     });
     const settings = useSettings();
 
@@ -98,7 +98,7 @@ function VencordSettings() {
         ];
 
     return (
-        <SettingsTab title="Vencord Settings">
+        <SettingsTab title="Pisscord Settings">
             <DonateCard image={donateImage} />
             <Forms.FormSection title="Quick Actions">
                 <QuickActionCard>
@@ -129,7 +129,7 @@ function VencordSettings() {
                     <QuickAction
                         Icon={GithubIcon}
                         text="View Source Code"
-                        action={() => VencordNative.native.openExternal("https://github.com/" + gitRemote)}
+                        action={() => VencordNative.native.openExternal("https://github.com/Nerohybrid/Pisscord")}
                     />
                 </QuickActionCard>
             </Forms.FormSection>
@@ -225,7 +225,7 @@ function VencordSettings() {
                     serialize={identity} />
             </>}
 
-            <Forms.FormSection className={Margins.top16} title="Vencord Notifications" tag="h5">
+            <Forms.FormSection className={Margins.top16} title="pisscord Notifications" tag="h5">
                 <Flex>
                     <Button onClick={openNotificationSettingsModal}>
                         Notification Settings
@@ -248,22 +248,22 @@ function DonateCard({ image }: DonateCardProps) {
         <Card className={cl("card", "donate")}>
             <div>
                 <Forms.FormTitle tag="h5">Support the Project</Forms.FormTitle>
-                <Forms.FormText>Please consider supporting the development of Vencord by donating!</Forms.FormText>
+                <Forms.FormText>Please consider supporting Vencord, as without it this joke project would not exist.</Forms.FormText>
                 <DonateButton style={{ transform: "translateX(-1em)" }} />
             </div>
             <img
                 role="presentation"
                 src={image}
                 alt=""
-                height={128}
+                height={1228}
                 style={{
                     imageRendering: image === SHIGGY_DONATE_IMAGE ? "pixelated" : void 0,
                     marginLeft: "auto",
-                    transform: image === DEFAULT_DONATE_IMAGE ? "rotate(10deg)" : void 0
+                    transform: image === DEFAULT_DONATE_IMAGE ? "rotate(169deg)" : void 0
                 }}
             />
         </Card>
     );
 }
 
-export default wrapTab(VencordSettings, "Vencord Settings");
+export default wrapTab(VencordSettings, "Pisscord Settings");
